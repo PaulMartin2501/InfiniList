@@ -1,0 +1,7 @@
+
+
+Enable-Migrations -ContextTypeName InfiniList.DAL.InfiniBackEnd -MigrationsDirectory Migrations\ListMigrations -Force
+
+add-migration -ConfigurationTypeName InfiniList.Migrations.ListMigrations.Configuration "Initial Create"
+
+update-database -ConfigurationTypeName InfiniList.Migrations.ListMigrations.Configuration
