@@ -1,0 +1,52 @@
+﻿@*@model IEnumerable<InfiniList.Models.List>*@
+@model PagedList.IPagedList<InfiniList.Models.List>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { id = ViewBag.CollectionID })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayFor(modelItem => item.Title)*@
+            @Html.ActionLink("Title", "Index")
+        </th>
+        <th>
+           @Html.ActionLink("Notes", "Index")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID, ColID = ViewBag.CollectionID })
+            </td>
+        </tr>
+    }
+
+</table>   
+<div>
+    @Html.ActionLink("Back to Collection", "Index", "Collection")
+</div>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+     new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+
+
