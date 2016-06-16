@@ -4,31 +4,75 @@
 
 <div class="jumbotron">
     <h1>Infini List</h1>
-    <p class="lead">The ultimate Collection Holder</p>
-    <p><a href="@Url.Action("about", "home")" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <p class="lead">Collect. Organize.</p>
+    <p><a href="@Url.Action("Login", "Account")" class="btn btn-primary btn-lg">Login &raquo;</a></p>
+</div>
+
+
+
+<div class="row text-center">
+    <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+            <img src="~/img/comic-books.jpg" alt="Comic Books" />
+                 <div class="caption">
+                     <p>
+                         Comic Book Collections
+                     </p>
+                 </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+            <img src="~/img/movies-collection.jpg" alt="Movies" />
+            <div class="caption">
+                <p>
+                    DVD/Blu-ray Collections
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+            <img src="~/img/amiibo1.jpg" alt="ActionFigures" />
+            <div class="caption"></div>
+            <p>
+                Action Figure Collections
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="thumbnail">
+            <img src="~/img/jewelary-collection.jpg" alt="Anything" />
+            <div class="caption"></div>
+            <p>
+                Collect Absolutely Anything
+            </p>
+        </div>
+    </div>
 </div>
 
 <div class="row">
     <div class="col-md-4">
         <h2>Getting Started</h2>
         <p>
-            This is just a little "taste" about this site. If you collect anything at all you can this site to keep track of your collections.
-            There is nothing worse than buying the same movie, comic, or video game. I hope anybody can use this site and keep track of different
-            collections they own. Get logged in and enjoy!
+            Welcome. This site is for you. The collector. Feel free to use this service to keep track of everything on your shelf or 
+            in your house for that matter. You can always keep track of anything digital as well.
         </p>
-        <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="@Url.Action("Register", "Account")">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Get in Contact</h2>
-        <p>Just a quick way to get in contact with someone on this site. Considering there is only ME!, it should be pretty easy</p>
-        <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+        <p>A quick way to get in contact with us here at Infini List. Need a new password or some other issue fixed. just click here,
+           and send a quick email abd we will get back to you as fast as we can.       
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Contact", "Home")">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
         <h2>Something About Me</h2>
         <p>
-            You can check out this link if your into knowing alittle bit about who made the site your checking out. 
-           If that isn't your thing just get down to collecting your collections
+            You can check out this link if your into knowing a little bit about who made the site your checking out. 
+           If that isn't your thing just get down to collecting and organizing your collections
         </p>
-        <p><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="@Url.Action("About", "Home")">Learn more &raquo;</a></p>
     </div>
 </div>

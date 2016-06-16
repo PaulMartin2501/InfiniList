@@ -215,6 +215,7 @@
     <Compile Include="Migrations\ListMigrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Collection.cs" />
+    <Compile Include="Models\ContactForm.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\List.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -230,6 +231,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\amiibo1.jpg" />
+    <Content Include="img\amiibo_collection.jpg" />
+    <Content Include="img\comic-books.jpg" />
+    <Content Include="img\comic-collection.JPG" />
+    <Content Include="img\jewelary-collection.jpg" />
+    <Content Include="img\movie-collection.jpg" />
+    <Content Include="img\movies-collection.jpg" />
+    <Content Include="img\videogame-collection.jpg" />
+    <Content Include="img\videogame-collection2.jpg" />
+    <Content Include="img\welcome.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -260,6 +271,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -298,6 +310,9 @@
     <Content Include="Views\List\Details.cshtml" />
     <Content Include="Views\List\Edit.cshtml" />
     <Content Include="Views\List\Index.cshtml" />
+    <None Include="Web.ifl.pjmartin.ca - Web Deploy %282%29.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
