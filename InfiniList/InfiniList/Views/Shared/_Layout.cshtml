@@ -22,6 +22,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>
+                        @Html.ActionLink("Collection", "Index", "Collection", routeValues: null, htmlAttributes: new { title = "Collection" })
+                    </li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
@@ -32,12 +35,16 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+        @*<div id="footer">
+            <div class="container"><p>&copy; @DateTime.Now.Year - Paul Martin</p></div>
+        </div>*@
         <footer>
             <p>&copy; @DateTime.Now.Year - Paul Martin</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/Custom")*@
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
