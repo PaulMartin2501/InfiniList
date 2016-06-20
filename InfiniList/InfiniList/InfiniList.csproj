@@ -310,6 +310,7 @@
     <Content Include="Views\List\Details.cshtml" />
     <Content Include="Views\List\Edit.cshtml" />
     <Content Include="Views\List\Index.cshtml" />
+    <Content Include="Views\Home\Sent.cshtml" />
     <None Include="Web.ifl.pjmartin.ca - Web Deploy %282%29.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

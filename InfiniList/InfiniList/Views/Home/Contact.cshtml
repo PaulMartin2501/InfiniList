@@ -3,13 +3,134 @@
 @{
     ViewBag.Title = "Contact";
 }
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Infini-List</title>
+    <link href="/Content/bootstrap.css" rel="stylesheet" />
+    <link href="/Content/site.css" rel="stylesheet" />
+
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">IFL.com</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Collection">Collection</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/Contact">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/Account/Register" id="registerLink">Register</a></li>
+                    <li><a href="/Account/Login" id="loginLink">Log in</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+        <h2>Contact.</h2>
+        <h3>Infini List contact page.</h3>
+
+        <form action="/Home/Contact" method="post">
+            <input name="__RequestVerificationToken" type="hidden" value="i7eeW_WB8MynPWFx6UJfDGufwuLOltyzWZd64cQZwtYXLyXSuF46O2xM9Bn2Y4xNviVBuJioVIiN9NjLRbVTykLCLlUeHAjIw4olmxEkw3c1" />    <h4>Send your comments and or concerns.</h4>
+            <hr />
+            <div class="form-group">
+                <label class="col-md-2 control-label" for="Name">Name</label>
+                <div class="col-md-10">
+                    <input class="form-control" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" type="text" value="" />
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label" for="Email">Email</label>
+                <div class="col-md-10">
+                    <input class="form-control" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" type="text" value="" />
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label" for="Subject">Subject</label>
+                <div class="col-md-10">
+                    <input class="form-control" data-val="true" data-val-required="The Subject field is required." id="Subject" name="Subject" type="text" value="" />
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Subject" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label" for="Message">Message</label>
+                <div class="col-md-10">
+                    <textarea class="form-control" cols="20" data-val="true" data-val-required="The Message field is required." id="Message" name="Message" rows="2"></textarea>
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Message" data-valmsg-replace="true"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" class="btn btn-default" value="Send" />
+                </div>
+            </div>
+        </form>
+
+
+
+
+
+
+        <hr />
+        @*<footer>
+            <p>&copy; 2016 - Paul Martin</p>
+        </footer>*@
+    </div>
+
+    <script src="/Scripts/jquery-1.10.2.js"></script>
+
+
+    <script src="/Scripts/bootstrap.js"></script>
+    <script src="/Scripts/respond.js"></script>
+
+
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"appName":"Chrome","requestId":"2a4173feb5de40e4b2f6cfad5f5e4a89"}
+    </script>
+    <script type="text/javascript" src="http://localhost:59818/5ef66cb49b044282927ae6577b1734ea/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+</body>
+</html>
+
+
+@*@{
+    ViewBag.Title = "Contact";
+}
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h3>Infini List contact page.</h3>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <h4>Send your comments.</h4>
+    <h4>Send your comments and or concerns.</h4>
     <hr />
         <div class="form-group">
             @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
@@ -44,55 +165,13 @@
             <input type="submit" class="btn btn-default" value="Send" />
         </div>
     </div>
-}
+}*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
 
-@*<p>
-    Fill out the contact form below and you will receive a response as soon
-    as possible.
-</p>
 
-<form action="/Contact/Home" class="form-horizontal" method="post" role="form" novalidate="novalidate">
-    <input name="_RequestVerificationToken" type="hidden" value="SfI71NqpbKrOWerORaIA08NwR5fbuH-dq4k7zhkIjl3UmhyNBLnX1LFqteddRIHVYskRHGvmqiCsZ55Yy5xWoiucBFbktUDHqMd44gnsV0A1" />
-    <div class="validation-summary-valid text-danger" data-valmsg-summary="true">
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="Name">Name</label>
-        <div class="col-md-10">
-            <input class="form-control" id="Name" name="Name" type="text" />
-        </div>
-    </div>
-    <div class="">
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="Email">Email Address</label>
-        <div class="col-md-10">
-            <input class="form-control" id="Name" name="Name" type="text" />
-        </div>
-    </div>
-    <div class="">
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="Subject">Subject</label>
-        <div class="col-md-10">
-            <input class="form-control" id="Name" name="Name" type="text" />
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-md-2 control-label" for="Message">Message</label>
-        <div class="col-md-10">
-            <textarea class="form-control" type="text"></textarea>
-            </div>
-        </div>
-</form>
-<div class="form-group">
-    <div class="col-md-offset-2 col-md-10">
-        <input type="submit" class="btn btn-default" value="Submit" />
-    </div>
-</div>*@
 
 
 
