@@ -4,7 +4,7 @@
     ViewBag.Title = "Contact";
 }
 
-<!DOCTYPE html>
+@*<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -85,19 +85,19 @@
                     <input type="submit" class="btn btn-default" value="Send" />
                 </div>
             </div>
-        </form>
+        </form>*@
 
 
 
 
 
 
-        <hr />
+        @*<hr />*@
         @*<footer>
             <p>&copy; 2016 - Paul Martin</p>
         </footer>*@
-    </div>
-
+    @*</div>
+   
     <script src="/Scripts/jquery-1.10.2.js"></script>
 
 
@@ -106,22 +106,22 @@
 
 
     <script src="/Scripts/jquery.validate.js"></script>
-    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.js"></script>*@
 
 
 
     <!-- Visual Studio Browser Link -->
-    <script type="application/json" id="__browserLink_initializationData">
+    @*<script type="application/json" id="__browserLink_initializationData">
         {"appName":"Chrome","requestId":"2a4173feb5de40e4b2f6cfad5f5e4a89"}
     </script>
-    <script type="text/javascript" src="http://localhost:59818/5ef66cb49b044282927ae6577b1734ea/browserLink" async="async"></script>
+    <script type="text/javascript" src="http://localhost:59818/5ef66cb49b044282927ae6577b1734ea/browserLink" async="async"></script>*@
     <!-- End Browser Link -->
 
-</body>
-</html>
+@*</body>
+</html>*@
 
 
-@*@{
+@{
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title.</h2>
@@ -165,13 +165,17 @@
             <input type="submit" class="btn btn-default" value="Send" />
         </div>
     </div>
-}*@
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
 }
 
+@*<div id="container">
+    <div id="footer">
+        <p>&copy; @DateTime.Now.Year - Paul Martin</p>
+    </div>
+</div>*@
 
+@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
 
 
 

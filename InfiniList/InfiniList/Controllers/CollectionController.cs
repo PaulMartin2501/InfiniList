@@ -19,6 +19,7 @@ namespace InfiniList.Controllers
         private InfiniBackEnd db = new InfiniBackEnd();
 
         // GET: Collection
+        [Authorize]
         public ActionResult Index(string sortOrder, string searchString, string currentFilter, int? page)
         {
             ViewBag.CurrentSort = sortOrder;//get current sort from UI
