@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Infini-List</title>
+    <title>Infini-List Collect.Organize</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -23,7 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>
-                        @Html.ActionLink("Collection", "Index", "Collection", routeValues: null, htmlAttributes: new { title = "Collection" })
+                        @Html.ActionLink("Collection", "Index", "Collection")
                     </li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
@@ -36,16 +36,25 @@
         @RenderBody()
         <hr />
         @*<div id="footer">
-            <div class="container"><p>&copy; @DateTime.Now.Year - Paul Martin</p></div>
-        </div>*@
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Paul Martin</p>
-        </footer>
-    </div>
+                <div class="container"><p>&copy; @DateTime.Now.Year - Paul Martin</p></div>
+            </div>*@
 
-    @Scripts.Render("~/bundles/jquery")
-    @*@Scripts.Render("~/bundles/Custom")*@
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        @*<div class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container">
+                <div class="navbar-footer">*@
+        @*<div id="container">*@
+            <div class="footer">
+                <p>&copy; @DateTime.Now.Year - Paul Martin</p>
+            </div>
+        @*</div>*@
+                @*</div>
+        </div>
+    </div>*@
+        </div>
+  
+                @Scripts.Render("~/bundles/jquery")
+                @*@Scripts.Render("~/bundles/Custom")*@
+                @Scripts.Render("~/bundles/bootstrap")
+                @RenderSection("scripts", required: false)
 </body>
 </html>

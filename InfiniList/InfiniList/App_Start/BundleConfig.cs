@@ -24,7 +24,7 @@ namespace InfiniList
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/Custom.css",
+                      //"~/Content/Custom.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }

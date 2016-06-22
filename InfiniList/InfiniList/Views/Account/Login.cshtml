@@ -16,7 +16,7 @@
                 @*<p>
                         @Html.ActionLink("Register as a new user", "Register")
                     </p>*@
-                <p><a class="btn btn-default" href="@Url.Action("Register", "Account")">Register &raquo;</a></p>
+                <p><a class="btn btn-default" id="register" href="@Url.Action("Register", "Account")">Register &raquo;</a></p>
         
         <hr />
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
